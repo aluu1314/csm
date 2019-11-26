@@ -17,38 +17,57 @@
 	<div class="container" style="background:gray">
 		container
 	</div>
-	<canvas>
+	<canvas> 
 		
 	</canvas>
-	<div class="container-fluid" style="background:rgb(20%,30%,70%)">
+	<div class="container-fluid" style="background:black">
      		container-fluid
      		<div class="row">
-     			<div class="col-md-4"  style="height:300px; background:url(/resource/images/1.jpg)  no-repeat"></div>
-     			<div class="col-md-2" style="height:300px;background:url(/resource/images/2.jpg) no-repeat"></div>
+     			<div class="col-md-4"  style="height:300px; background:url(/resource/images/33.jpg)  no-repeat"></div>
+     			<div class="col-md-2" style="height:300px;background:url(/resource/images/31.jpg) no-repeat"></div>
      			<div class=" row col-md-6" style="height:300px">
-     				<div class="col-md-4" style="background:rgb(30%,30%,40%)" >
+     				<div class="col-md-4" style="background:red" >
      					<h1>  第一个标题  </h1>
+     					<th>吃饭</th><hr>
+     					<th>吃饭</th><hr>
+     					<th>吃饭</th><hr>
      				</div>
-     				<div class="col-md-4" style="background:rgb(60%,30%,10%)">
+     				<div class="col-md-4" style="background:orange">
      					<h2>  第二个标题  </h2>
+     					<th>睡觉</th><hr>
+     					<th>睡觉</th><hr>
+     					<th>睡觉</th><hr>
      				</div>
-     				<div class="col-md-4" style="background:rgb(0%,30%,70%)">
+     				<div class="col-md-4" style="background:yellow">
      					<h5>  第三个标题  </h5>
+     					<th>打豆豆</th><hr>
+     					<th>打豆豆</th><hr>
+     					<th>打豆豆</th><hr>
      				</div>
      			</div>
      		</div>
      		<div class="row">
-     			<div class="col-md-4"  style="height:300px; background:url(/resource/images/1.jpg)  no-repeat"></div>
-     			<div class="col-md-2" style="height:300px;background:url(/resource/images/2.jpg) no-repeat"></div>
+     			<div class="col-md-4"  style="height:300px; background:url(/resource/images/33.jpg)  no-repeat"></div>
+     			<div class="col-md-2" style="height:300px;background:url(/resource/images/31.jpg) no-repeat"></div>
      			<div class=" row col-md-6" style="height:300px">
-     				<div class="col-md-4" style="background:rgb(30%,30%,40%)" >
+     				<div class="col-md-4" style="background:green" >
      					<h1>  第一个标题  </h1>
+     					<th>不吃饭</th><hr>
+     					<th>不吃饭</th><hr>
+     					<th>不吃饭</th><hr>
+     					
      				</div>
-     				<div class="col-md-4" style="background:rgb(60%,30%,10%)">
+     				<div class="col-md-4" style="background:cyan ">
      					<h2>  第二个标题  </h2>
+     					<th>不睡觉</th><hr>
+     					<th>不睡觉</th><hr>
+     					<th>不睡觉</th><hr>
      				</div>
-     				<div class="col-md-4" style="background:rgb(0%,30%,70%)">
+     				<div class="col-md-4" style="background: azure">
      					<h5>  第三个标题  </h5>
+     					<th>不打豆豆</th><hr>
+     					<th>不打豆豆</th><hr>
+     					<th>不打豆豆</th><hr>
      				</div>
      			</div>
      		</div>

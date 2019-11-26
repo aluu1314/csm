@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Update;
 import com.shenjialong.entity.Link;
 /**
  * 
- * @author zhuzg
+ * @author sjl
  *
  */
 public interface LinkMapper {

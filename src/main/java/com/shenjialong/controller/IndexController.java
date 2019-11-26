@@ -102,24 +102,10 @@ public class IndexController {
 	   PageInfo<Link> info=  linkService.list(1);
 	   List<Link> linkList =  info.getList();
 	   
-	   
-		
-		
-		
-		request.setAttribute("hotList", hotList);
+	   	request.setAttribute("hotList", hotList);
 		request.setAttribute("newArticles", newArticles);
-		
 		request.setAttribute("imgArticles", imgArticles);
-		
 		request.setAttribute("linkList", linkList);
-		
-		
-		
-		
-		
-		
-		//
-		
 		return "index";
 	}
 

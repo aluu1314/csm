@@ -6,7 +6,7 @@
   	<!-- logo -->
   	<div class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img alt="Brand" src="/resource/images/logo.png">
+        <img alt="Brand" src="/resource/images/112.jpg">
       </a>
     </div>
     

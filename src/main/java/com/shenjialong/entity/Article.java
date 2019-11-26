@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * 
- * @author zhuzg
+ * @author sjl
  *
  */
 public class Article implements Serializable {

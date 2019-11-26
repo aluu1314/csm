@@ -25,13 +25,13 @@
 	       <td><fmt:formatDate value="${article.created}" pattern="yyyy-MM-dd"/></td>
 	       <td>
 	       <c:choose>
-	       	<c:when test="${article.status==0}">
+	       	<c:when test="article.status==0">
 	       		待审核
 	       	</c:when>
-	       	<c:when test="${article.status==1}">
+	       	<c:when test="article.status==1">
 	       		审核通过
 	       	</c:when>
-	       	<c:when test="${article.status==2}">
+	       	<c:when test="article.status==2">
 	       		审核被拒
 	       	</c:when>
 	       	<c:otherwise>
@@ -46,6 +46,7 @@
    	</c:forEach>
   </tbody>
 </table>
+
 <div class="row" style="text-align: center;padding-top:1px">
 <ul class="pagination" style="text-align:center">
     <li><a href="javascript:goPage(${pageInfo.prePage})">&laquo;</a></li>
@@ -60,15 +61,15 @@
     </c:forEach>
     <li><a href="javascript:goPage(${pageInfo.nextPage})">&raquo;</a></li>
 </ul>
+
 </div>
 
 <script type="text/javascript">
-
 	function modifyArticle(articleId){
-		var url="/user/updateArticle?id="+articleId;
-		$("#content").load(url);
+	var url="/user/updateArticle?id="+articleId;
+	$("#content").load(url);
 	}
-
+	
 	function goPage(page){
 		var url="/user/myarticles?page="+page ;
 		$("#content").load(url);

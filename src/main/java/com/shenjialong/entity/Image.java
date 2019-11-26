@@ -2,7 +2,7 @@ package com.shenjialong.entity;
 
 /**
  * 
- * @author zhuzg
+ * @author sjl
  *
  */
 public class Image {

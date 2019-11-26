@@ -173,8 +173,20 @@ public class UserController {
 	 */
 	@RequestMapping("home")
 	public String home(HttpServletRequest request) {
+		
+		List<Collect> list=collectService.selectObjects();
+		request.setAttribute("list",list);
 		return "/user/home";
 	}
+	
+	@RequestMapping("listt")
+	public String select(HttpServletRequest request) {
+		
+		List<Collect> list=collectService.selectObjects();
+		request.setAttribute("users",list);
+		return "/article/detail2";
+	}
+	
 	
 	/**
 	 * 

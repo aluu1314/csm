@@ -4,9 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>  
 
 <script type="text/javascript">
-<!--
-	
-//-->
+
 function updateStatus(userId,status){
 	$.post("/admin/lockuser",
 			{userId:userId,status:status},
@@ -118,7 +116,7 @@ function search(){
 </ul>
 
 <script type="text/javascript">
-	function goPage(page){
+	function goPage(url,page){
 		var url="/admin/users?page="+page + "&name=${name}";
 		$("#content").load(url);
 	}

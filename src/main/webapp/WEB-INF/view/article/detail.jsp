@@ -46,38 +46,45 @@
 			<div class="container" id="commentList">
 			
 			</div>
-			
 		</div>
 	</div>
-	<script type="text/javascript">
-	function favarite(id){
-		
-		$.post("/user/favarite",{id:id},function(msg){
-			if(msg.result==1){
-				alert('收藏成功')
-			}else{
-				alert(msg.errorMsg);
-			}
-		},"json");
-		
-	}
+
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="/#">返回</a>
+</body>
+<script type="text/javascript">
+
+function favarite(id){
 	
-	// 将本篇放入我的收藏夹中
-	function collect(id){
-		
-		 var url = window.location.href;
-		 
-		$.post("/user/collect",{name:'${article.title}',url:url},function(msg){
-			if(msg.result==1){
-				alert('加入收藏夹成功')
-			}else{
-				alert(msg.errorMsg);
-			}
-		},"json");
-		
-	}
+	$.post("/user/favarite",{id:id},function(msg){
+		if(msg.result==1){
+			alert('收藏成功')
+		}else{
+			alert(msg.errorMsg);
+		}
+	},"json");
 	
+}
+
+//将本篇放入我的收藏夹中
+function collect(id){
 	
+	 var url = window.location.href;
+	 alert(url);
+	 
+	$.post("/user/collect",{name:'${article.title}',url:url},function(msg){
+		if(msg.result==1){
+			alert('加入收藏夹成功');
+		}else{
+			alert(msg.errorMsg);
+		}
+	},"json");
+	
+}
+
+
 	function comment(){
 		$.post("/user/comment",{id:'${article.id}',content:$("#commentContent").val()},
 			function(msg){
@@ -90,13 +97,11 @@
 		"json"
 		)
 	}
-	
+
 	function showComments(){
 		$("#commentList").load('/article/commentlist?id=${article.id}');
 	}
 	showComments();
-	
-	</script>
 
-</body>
+</script>
 </html>

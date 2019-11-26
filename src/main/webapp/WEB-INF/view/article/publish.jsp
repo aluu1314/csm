@@ -125,7 +125,7 @@ function publish(){
 			success:function(obj){
 				if(obj){
 					alert("发布成功!")
-					$('#content').load("/user/myarticlelist");
+					$('#content').load("/user/myarticles");
 				}else{
 					alert("发布失败")
 				}
@@ -140,6 +140,7 @@ function publish(){
 
 
 </script>
+<a href="/user/home">返回主页面</a>
 <%!
 private String htmlspecialchars(String str) {
 	str = str.replaceAll("&", "&amp;");

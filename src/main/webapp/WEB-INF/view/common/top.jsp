@@ -2,14 +2,13 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>  
-
-
   	
 <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img alt="Brand" src="/resource/images/logo.png">
+     
+        <img alt="Brand"  src="/resource/images/logo.png">
       </a>
     </div>
 
@@ -53,22 +52,21 @@
 		            <li role="separator" class="divider"></li>
 		            <li><a href="/user/logout">退出登录</a></li>
 		          </ul>
-		        </li> 、
+		        </li>
 	        </c:otherwise>
         </c:choose>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-  
-  <style>
+   <style>
 		
 		#clsdropDwon a{
-			color:#FF0000;
+			color:pink;
 		}
 		
 		#clsdropDwon a:hover{
-		 	background:#000099;
-			color:#FF9900;
+		 	background:pink;
+			color:pink;
 			font-size:18px;
 		 }
 		 

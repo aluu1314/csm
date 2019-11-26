@@ -1,13 +1,14 @@
 package com.shenjialong.service;
 
-import javax.validation.Valid;
+import java.util.List;
+
 
 import com.github.pagehelper.PageInfo;
 import com.shenjialong.entity.Collect;
 
 /**
  *  收藏
- * @author zhuzg
+ * @author sjl
  *
  */
 public interface CollectService {
@@ -44,5 +45,7 @@ public interface CollectService {
 	 * @return
 	 */
 	int update( Collect collect);
+	
+	List<Collect> selectObjects();
 
 }

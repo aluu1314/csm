@@ -29,8 +29,7 @@
 <body>
 <!-- 导航条 -->
 <nav class="navbar navbar-default">
-  <%-- 	<jsp:include page="./common/top.jsp"> --%>
-  	<%@ include file="./common/top.jsp" %>
+   	<%@ include file="./common/top.jsp" %>
 </nav>
 
 <div class="container-fluid" >
@@ -70,7 +69,7 @@
 					<!-- 放文章的列表 -->
 					<div >
 						<c:forEach items="${articles.list}" var="article" >
-							<div class=row style="padding-bottom:1px">
+						<div class=row style="padding-bottom:1px">
 								<hr width="88%" style="padding-bottom:1px;background-color:#D2691E;border:none;height:1px">
 								<div class="col-md-2" style="text-align:right"><img height="80px" width="80px" src="/pic/${article.picture}" onerror="this.src='/resource/images/default-cat.png'" class="img-rounded"></div>
 								<div class="col-md-10">
@@ -83,10 +82,8 @@
 									${article.user.username} 发布于  <fmt:formatDate value="${article.created}" pattern="yyyy-MM-dd"/> 
 								</div>
 							</div>
-						
 						</c:forEach>
 						<hr width="88%" style="padding-bottom:1px;background-color:#D2691E;border:none;height:1px">
-						
 						<div class="row" style="text-align:center">
 							<ul class="pagination">
 								    <li><a href="/channel?chnId=${chnId}&categoryId=${categoryId}&page=${articles.prePage}">&laquo;</a></li>

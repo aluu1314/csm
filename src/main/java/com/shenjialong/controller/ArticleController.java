@@ -54,26 +54,24 @@ public class ArticleController {
 		
 	}
 	
-	//getCategoryByChannel",{chnId:channelId},"
-	//		+ "
+
 	@RequestMapping("getCategoryByChannel")
 	@ResponseBody
 	public MsgResult getCategoryByChannel(int chnId) {
-		//List<Category> categories =  
+		
 		List<Category> categories = catService.listByChannelId(chnId);
 		return new MsgResult(1, "",  categories);
 		
 	}
 	
 	@RequestMapping("commentlist")
-	//@ResponseBody
-	public String commentlist(HttpServletRequest request, int id,
-			@RequestParam(defaultValue="1") int page) {
+	
+	public String commentlist(HttpServletRequest request, int id,@RequestParam(defaultValue="1") int page) {
 		
 		PageInfo<Comment> pageComment =  articleService.commentlist(id,page);
 		request.setAttribute("pageComment", pageComment);
 		return "article/comments";
-		//return new MsgResult(1,"获取成功",pageComment);
+	
 		
 	}
 	

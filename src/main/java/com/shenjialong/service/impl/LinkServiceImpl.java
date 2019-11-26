@@ -11,7 +11,7 @@ import com.shenjialong.service.LinkService;
 
 /**
  * 
- * @author zhuzg
+ * @author sjl
  *
  */
 @Service

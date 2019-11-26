@@ -6,7 +6,7 @@ import org.hibernate.validator.constraints.Length;
 
 /**
  *  收藏
- * @author zhuzg
+ * @author sjl
  *
  */
 

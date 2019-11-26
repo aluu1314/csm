@@ -16,10 +16,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.github.pagehelper.PageInfo;
 import com.shenjialong.common.ConstantClass;
 import com.shenjialong.common.MsgResult;
+import com.shenjialong.StringUtils;
 import com.shenjialong.entity.Collect;
 import com.shenjialong.entity.User;
 import com.shenjialong.service.CollectService;
-import com.shenjialong.StringUtils;
+
 
 /**
  *  收藏
@@ -102,7 +103,7 @@ public class CollectController {
 		
 		// 有错误 还在原来的页面
 		if(result.hasErrors()) {
-			//request.setAttribute("collect", collect);
+			
 			return "user/collect/update";	
 		}
 		
@@ -121,10 +122,7 @@ public class CollectController {
 	 * @return
 	 */
 	@PostMapping("add")
-	public String add(HttpServletRequest request,
-			@Valid  @ModelAttribute("collect") Collect collect,
-			BindingResult result
-			) {
+	public String add(HttpServletRequest request,@Valid  @ModelAttribute("collect") Collect collect,BindingResult result) {
 		
 		if(!StringUtils.isHttpUrl(collect.getUrl())) {
 			result.rejectValue("url", "不是合法的url", "不是合法的url");

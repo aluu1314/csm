@@ -191,7 +191,7 @@
 	$('#articleDetailModal').on('hidden.bs.modal', function () {
 		  // 执行一些动作...
 		//alert("关闭") 
-		//$("#content").load("/admin/articles?page=${pageInfo.pageNum}");
+		$("#content").load("/admin/articles?page=${pageInfo.pageNum}");
 		  
 	})
 		

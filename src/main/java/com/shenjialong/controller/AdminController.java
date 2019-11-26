@@ -18,7 +18,7 @@ import com.shenjialong.service.UserService;
 
 /**
  * 
- * @author zhuzg
+ * @author sjl
  *
  */
 @Controller
@@ -97,28 +97,19 @@ public class AdminController {
 	@ResponseBody
 	public MsgResult lock(Integer userId,int status) {
 		
-		/**
-		 * 
-		 */
+		
 		if(status != 0 && status!=1) {
 			return new MsgResult(2,"参数无效",null);
 		}
 		
-		/**
-		 * 
-		 */
 		User user  = userService.getUserById(userId);
 		
-		/**
-		 * 
-		 */
+		
 		if(user == null) {
 			return new MsgResult(2,"该用户不存在",null);
 		}
 		
-		/**
-		 * 
-		 */
+		
 		if(user.getLocked()==status) {
 			return new MsgResult(2,"无需做该操作",null);
 		}

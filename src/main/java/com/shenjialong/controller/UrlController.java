@@ -23,9 +23,7 @@ public class UrlController {
 	}
 	
 	@PostMapping("add")
-	public String add(HttpServletRequest request, 
-			@Validated @ModelAttribute("url") Url url,
-			BindingResult result) {
+	public String add(HttpServletRequest request, @Validated @ModelAttribute("url") Url url,BindingResult result) {
 		if(result.hasErrors()) {
 			return "url/add";
 		}

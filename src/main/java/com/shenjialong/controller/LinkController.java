@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.github.pagehelper.PageInfo;
 import com.shenjialong.common.MsgResult;
+import com.shenjialong.StringUtils;
 import com.shenjialong.entity.Link;
 import com.shenjialong.service.LinkService;
-import com.shenjialong.StringUtils;
 
 /**
  * 
@@ -38,8 +38,7 @@ public class LinkController {
 	 * @return
 	 */
 	@RequestMapping("list")
-	public String list(HttpServletRequest request, 
-			@RequestParam(defaultValue="1") int page) {
+	public String list(HttpServletRequest request, @RequestParam(defaultValue="1") int page) {
 		
 		PageInfo info = linkService.list(page);
 		request.setAttribute("info", info);
@@ -86,10 +85,7 @@ public class LinkController {
 	 * @return
 	 */
 	@PostMapping("update")
-	public String update(HttpServletRequest request,
-			@Valid  @ModelAttribute("link") Link link,
-			BindingResult result
-			) {
+	public String update(HttpServletRequest request,@Valid  @ModelAttribute("link") Link link,BindingResult result) {
 		
 		if(!StringUtils.isHttpUrl(link.getUrl())) {
 			result.rejectValue("url", "不是合法的url", "不是合法的url");
@@ -97,7 +93,7 @@ public class LinkController {
 		
 		// 有错误 还在原来的页面
 		if(result.hasErrors()) {
-			//request.setAttribute("link", link);
+			
 			return "amdin/link/update";	
 		}
 		
@@ -116,10 +112,7 @@ public class LinkController {
 	 * @return
 	 */
 	@PostMapping("add")
-	public String add(HttpServletRequest request,
-			@Valid  @ModelAttribute("link") Link link,
-			BindingResult result
-			) {
+	public String add(HttpServletRequest request,@Valid  @ModelAttribute("link") Link link,BindingResult result) {
 		
 		if(!StringUtils.isHttpUrl(link.getUrl())) {
 			result.rejectValue("url", "不是合法的url", "不是合法的url");

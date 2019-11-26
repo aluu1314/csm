@@ -7,7 +7,7 @@ import com.shenjialong.entity.Link;
 
 /**
  * 
- * @author zhuzg
+ * @author sjl
  *
  */
 public interface LinkService {

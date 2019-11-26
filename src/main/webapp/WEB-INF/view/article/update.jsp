@@ -104,7 +104,7 @@
 			   // 追加
 			   $("#category").append("<option value='0'>请选择</option>")
 			   for ( var index in data.data) {
-				   if(data.data[index].id == ${article.categoryId} ){
+				   if(data.data[index].id == '${article.categoryId}' ){
 				   	  $("#category").append("<option value='"+ data.data[index].id +"' selected>"+data.data[index].name+"</option>")
 				  }else{
 					  $("#category").append("<option value='"+ data.data[index].id +"'>"+data.data[index].name+"</option>")
@@ -144,7 +144,7 @@ function publish(){
 			success:function(obj){
 				if(obj){
 					alert("发布成功!")
-					$('#center').load("/user/myarticlelist");
+					$('#content').load("/user/myarticles");
 				}else{
 					alert("发布失败")
 				}
@@ -159,6 +159,7 @@ function publish(){
 
 
 </script>
+<a href="/user/home">返回主页面</a>
 <%!
 private String htmlspecialchars(String str) {
 	str = str.replaceAll("&", "&amp;");

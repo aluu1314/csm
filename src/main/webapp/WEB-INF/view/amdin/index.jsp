@@ -6,8 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link href="/resource/bootstrap/css/bootstrap.css" rel="stylesheet">  
- <script type="text/javascript" src="/resource/js/jquery-3.2.1.js"></script> 
- <script type="text/javascript" src="/resource/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="/resource/js/jquery-3.2.1.js"></script>
+<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"> -->
+ <script type="text/javascript" src="/resource/bootstrap/js/bootstrap.js?a=b"></script>
     
 <title>CMS管理平台</title>
 </head>
@@ -30,7 +31,9 @@
                     <li><a href="#">用户设置</a></li>
                     <li><a href="#">个人信息</a></li>
                     <li class="divider"></li>
-                    <li><a href="#">退出</a></li>
+                    <li><a href="/user/login">退出</a>
+                    	
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -57,21 +60,17 @@
 	</div>
 </div>
 
-
 <nav class="navbar navbar-inverse navbar-fixed-bottom" 
 role="navigation">
-	<div align="center"> <font color="#996633" size="5"> ----八维大数据学院1707D--- </font> </div>
+	<div align="center"> <font color="yellow" size="5"> ----八维大数据学院1707D--- </font> </div>
 </nav>
 
 <script type="text/javascript">
-	function showFuction(obj,url){
-		//$("#menu").children().removeClass('active');
-		//$("li").removeClass('active');
-		/* console.log(obj.attr("href"))
-		obj.parent().children().removeClass('active');
-		obj.addClass('active');  */
-		$("#content").load(url)
-	}
+function showFuction(obj,url){
+	
+	
+	$("#content").load(url)
+}
 </script>
 
 

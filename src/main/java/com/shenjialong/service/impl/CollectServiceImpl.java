@@ -1,5 +1,7 @@
 package com.shenjialong.service.impl;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +15,7 @@ import com.shenjialong.service.CollectService;
 
 /**
  * 
- * @author zhuzg
+ * @author sjl
  *
  */
 @Service
@@ -53,6 +55,13 @@ public class CollectServiceImpl  implements CollectService{
 		// TODO Auto-generated method stub
 		return collectMapper.update(collect);
 		
+	}
+
+	@Override
+	public List<Collect> selectObjects() {
+		// TODO Auto-generated method stub
+		return collectMapper.selectObjects();
+				
 	}
 
 }

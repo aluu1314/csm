@@ -1,23 +1,5 @@
-/**   
- * Copyright © 2019 公司名. All rights reserved.
- * 
- * @Title: CmcExceptionHtml.java 
- * @Prject: shenjialong-cms
- * @Package: com.shenjialong.common 
- * @Description: TODO
- * @author: 王帅  
- * @date: 2019年11月19日 上午10:50:58 
- * @version: V1.0   
- */
 package com.shenjialong.common;
 
-/** 
- *  抛出异常  异常在html页面显示
- * @ClassName: CmcExceptionHtml 
- * @Description: TODO
- * @author:王帅  
- * @date: 2019年11月19日 上午10:50:58  
- */
 public class CmcExceptionHtml extends RuntimeException {
 	/**
 	 * @fieldName: serialVersionUID

@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>  
-    
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,17 +16,14 @@
 		text-align:center;
 	}
 	.menu li:hover{
-		background:#000099;
-		color:#FF9900;
+		background:gray;
 	}
-	
 	.ex {
 		overflow: hidden;
 		text-overflow:ellipsis;
 		white-space: nowrap;
-	}
-	
-	div {
+		}
+		div {
 		background: 3399FF;
 	}
 	
@@ -42,19 +37,14 @@
 
 </head>
 
+<body>
 <body style="background:#3399FF;"> 
-	<!-- <audio autoplay="autoplay"   id="myaudio"  loop="loop" preload="auto"  
-      src="/resource/audio/jmszl.mp3"/> -->
-       
-      
-      
-	<!-- 导航条 -->
-<nav class="navbar navbar-default" style="background:#000099">
+
+<!-- 导航条 -->
+<nav class="navbar navbar-default" style="background:pink">
 	<%@include  file="common/top.jsp" %>
 </nav>
-
-
-<div class="container-fluid" style="background: url(/pic/banner.jpg) no-repeat; width:100%; height:100%;overflow: hidden;background-size:cover;" >
+<div class="container-fluid" style="background: url(/pic/24.png) no-repeat; width:100%; height:100%;overflow: hidden;background-size:cover;" >
 &nbsp;<br/>
 &nbsp;
 </div>
@@ -68,9 +58,8 @@
 </div> -->
 
 
-<div class="container-fluid" >
 
-	
+<div class="container-fluid" >
 	<div class="container" style="minheight:200px" >
 		<div class="row">
 			<!-- 左侧菜单 -->
@@ -102,13 +91,13 @@
 						<!-- 轮播（Carousel）项目 -->
 						<div class="carousel-inner thumbnail" style="border-radius:12px;">
 							<div class="item active">
-								<img  class="img-rounded"  src="/resource/images/lunbo1.jpg" style=" border-radius:24px; align:center;width:800px; height:400px;" alt="First slide">
+								<img class="img-rounded" src="/pic/23.png" style="border-radius:24px; align:center;width:800px; height:400px;" alt="First slide">
 							</div>
 							<div  class="item">
-								<img  class="img-rounded" src="/resource/images/lunbo2.jpg"  style="border-radius:24px;width:800px; height:400px;" alt="Second slide">
+								<img class="img-rounded" src="/pic/19.gif" style="border-radius:24px; width:800px; height:400px;" alt="Second slide">
 							</div>
 							<div class="item">
-								<img  class="img-rounded" src="/resource/images/lunbo3.jpg" style="border-radius:24px; width:800px; height:400px;" alt="Third slide">
+								<img class="img-rounded" src="/pic/009.gif" style="border-radius:24px; width:800px; height:400px;" alt="Third slide">
 							</div>
 						</div>
 						<!-- 轮播（Carousel）导航 -->
@@ -126,24 +115,22 @@
 					<div >
 						<c:forEach items="${hotList.list}" var="article" >
 						<div class=row style="padding-bottom:1px">
-							<hr width="88%" style="background-color:#D2691E;border:none;height:1px">
+							<hr width="88%" style="background-color:pink;border:none;height:1px">
 							<div class="col-md-2" style="text-align:right"><img height="80px" width="80px" src="/pic/${article.picture}" onerror="this.src='/resource/images/default-cat.png'" class="img-rounded"></div>
 							<div class="col-md-10">
 								<a href="javascript:showArticle(${article.id})">${article.title}</a>
-								<br><br>
+								<br>
 								 频道：<a>${article.channel.name}</a> &nbsp;&nbsp;
 								 分类：<a>${article.category.name}</a>
 								<br>
-								
+								<br>
 								${article.user.username} 发布于  <fmt:formatDate value="${article.created}" pattern="yyyy-MM-dd"/> 
 							</div>
+							
 						</div>
 						</c:forEach>
-						
-						
 						<div class="row" style="text-align: center;padding-top:1px">
-							<hr width="88%" style="background-color:#D2691E;border:none;height:1px">
-						
+							<hr width="88%" style="background-color:red;border:none;height:1px">
 							<ul class="pagination">
 								    <li><a href="/index?page=${hotList.prePage}">&laquo;</a></li>
 								    <c:forEach begin="${hotList.pageNum-2 > 1 ? hotList.pageNum-2:1}" end="${hotList.pageNum+2 > hotList.pages ? hotList.pages:hotList.pageNum+2}" varStatus="index">    		
@@ -165,9 +152,8 @@
 			
 			
 			<div class="col-md-2" style=" margin-top:30px ;minheight:200px" >
-			
-			
-			<div class="panel panel-primary">
+				
+				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h3 class="panel-title">图片文章</h3>
 					</div>
@@ -179,15 +165,14 @@
 					</div>
 				</div>
 				
-			
+				
 				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h3 class="panel-title">公告</h3>
 					</div>
 					<div class="panel-body">
-						<a href="#">1.今天浴池停水</a>
-						<br/>
-						<a href="#">2.下午食堂馒头免费</a>
+						<a href="https://www.4hw.com.cn/p/405235.html">1.肖战要演新电视剧了</a><br>
+						<a href="https://y.qq.com/n/yqq/singer/004OG5IM1BYEI3.html">2.王一博的要发布新歌了</a>
 					</div>
 				</div>
 				
@@ -196,10 +181,13 @@
 						<h3 class="panel-title">最新文章</h3>
 					</div>
 					<div class="panel-body ex">
+					
 						<c:forEach items="${newArticles}" var="article" varStatus="index">
-							${index.index+1} . <a>${article.title}</a>
+						
+							${index.index+1} . <a href="/article/showdetail?id=${index.index+25}">${article.title}</a>
 							<br/>
 						</c:forEach>
+					
 					</div>
 				</div>
 			
@@ -212,9 +200,10 @@
 
 
 
+
 <!-- 底部 -->
-<nav class="navbar navbar-default" style="background:#000099">
- <div class="container-fluid" style="text-align:center">
+<nav class="navbar navbar-default" style="background:yellow">
+<div class="container-fluid" style="text-align:center">
  	<div class="row" style="margin-top:13px">
  	    <div class="col-md-1"><a href="sohu.com" class="fl"></a></div>
  			<c:forEach items="${linkList}" var ="link">
@@ -235,6 +224,5 @@
 
 
 </script>
-
 </body>
 </html>

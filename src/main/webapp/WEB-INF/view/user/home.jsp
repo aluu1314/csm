@@ -8,13 +8,13 @@
  <link href="/resource/bootstrap/css/bootstrap.css" rel="stylesheet">  
  <script type="text/javascript" src="/resource/js/jquery-3.2.1.js"></script> 
  <script type="text/javascript" src="/resource/bootstrap/js/bootstrap.js"></script>
- <script type="text/javascript" src="/resource/kindeditor/kindeditor-all.js"></script>
+<script type="text/javascript" src="/resource/kindeditor/kindeditor-all.js"></script> 
  <title>有花堪折直须折</title>
  
-<body style="background:#3399FF;">
+<body style="background:yellow;">
 
 <!-- 导航条 -->
-<nav class="navbar navbar-default" style="background:#000099">
+<nav class="navbar navbar-default" style="background:pink">
 	<%@include  file="../common/top.jsp" %>
 </nav>
 <div class="container" style="margin-top:30px;margin-bottom:50px">
@@ -24,14 +24,15 @@
 			 <li class="list-group-item list-group-item-success" data="/user/myarticles">我的文章</li>
 			 <li class="list-group-item list-group-item-info" data="/user/postArticle">发布文章</li>
 			 <li class="list-group-item list-group-item-info" data="/user/postImg">发布图片</li>
-			 <li class="list-group-item list-group-item-info" data="/collect/list">我的收藏</li>
+			 <li class="list-group-item list-group-item-info" data="/user/listt">我的收藏</li>
+			
 			 <li class="list-group-item list-group-item-info">我的评论</li>
 			 <li class="list-group-item list-group-item-info">投票管理</li>
 			 <li class="list-group-item list-group-item-info">个人设置</li>
 			</ul>
 		</div>
 		<div class="col-md-9" id="content" 
-		   style="border:solid;min-height:500px;background-color:#FFFFFF;
+		   style="border:solid;min-height:500px;background-color:orange;
 		   overflow-x:scroll;overflow-y:scroll
 		   ">
 		
@@ -60,6 +61,7 @@
 	$("#content").load(url);
 	
 </script>
+<a href="/user/login">退回登录页面</a>
 
 </body>
 </html>

@@ -10,7 +10,7 @@ import com.shenjialong.entity.User;
 
 /**
  * 
- * @author zhuzg
+ * @author sjl
  *拦截器
  */
 public class UserInterceptor  implements HandlerInterceptor {

@@ -102,8 +102,7 @@ public interface ArticleMapper {
 
 	/**
 	 * 
-	 * #{articleType,typeHandler=org.apache.ibatis.type.EnumOrdinalTypeHandler,"
-			+ "jdbcType=INTEGER,javaType=com.shenjialong.entity.TypeEnum}
+	 *
 	 * 添加文章
 	 * @param article
 	 * @return
@@ -117,7 +116,7 @@ public interface ArticleMapper {
 			+ "#{userId},#{hits},#{hot},#{status},#{deleted},"
 			+ "now(),now(),#{commentCnt},"
 			+ "#{articleType,typeHandler=org.apache.ibatis.type.EnumOrdinalTypeHandler,"
-			+ "jdbcType=INTEGER,javaType=com.shenjialong.entity.TypeEnum})")
+			+ "jdbcType=INTEGER,javaType=com.shenjialong.bean.TypeEnum})")
 	int add(Article article);
 	//TypeHandler<T>
 

@@ -54,4 +54,7 @@ public interface CollectMapper {
 	@Delete("DELETE  FROM cms_collect WHERE id=#{value} ")
 	int delete(int id);
 
+	@Select("select * from cms_collect")
+	List<Collect> selectObjects();
+
 }

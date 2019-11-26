@@ -11,7 +11,7 @@ import com.shenjialong.service.ChannelService;
 
 /**
  * 
- * @author zhuzg
+ * @author sjl
  *
  */
 
